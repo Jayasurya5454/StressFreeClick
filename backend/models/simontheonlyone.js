@@ -10,4 +10,21 @@ const simontheonlyoneSchema = new mongoose.Schema({
     }
 });
  const Simontheonlyone = mongoose.model('Simontheonlyone', simontheonlyoneSchema);
+
+
+
+ (async () => {
+    try {
+        const existingDocument = await Simontheonlyone.findOne();
+        if (!existingDocument) {
+            await Simontheonlyone.create({}); // Create the default object
+            console.log("Default object created.");
+        } else {
+            console.log("Default object already Simontheonlyone.");
+        }
+    } catch (error) {
+        console.error("Error ensuring default object existence:", error);
+    }
+})();
+
  module.exports = Simontheonlyone;

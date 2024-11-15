@@ -1,4 +1,4 @@
-const { SouravBandyopadhyay } =  require('../models/souravBandyopadhyay');
+const  SouravBandyopadhyay  =  require('../models/souravBandyopadhyay');
 
 const updateLikeValue = async (req,res) => {
     try{

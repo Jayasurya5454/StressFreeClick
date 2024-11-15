@@ -1,4 +1,4 @@
-const { Barisdogonsutcu } = require('../models/barisdogonsutcu');
+const Barisdogonsutcu = require('../models/barisdogonsutcu');
 
 const updateLikeValue = async (req,res) => {
     try{

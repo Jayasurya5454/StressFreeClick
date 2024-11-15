@@ -1,5 +1,5 @@
 
-const {TrayRandall } = require('../models/trayRandall');
+const TrayRandall = require('../models/trayRandall');
 
 
 const updateLikeValue = async (req,res) => {

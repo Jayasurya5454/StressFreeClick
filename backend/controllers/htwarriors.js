@@ -1,4 +1,4 @@
-const { Htwarriors } = require('../models/htwarriors');
+const Htwarriors  = require('../models/htwarriors');
 
 
 const updateLikeValue = async (req,res) => {

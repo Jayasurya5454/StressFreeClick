@@ -1,4 +1,4 @@
-const { Simontheonlyone} = require('../models/simontheonlyone');
+const Simontheonlyone = require('../models/simontheonlyone');
 
 
 
