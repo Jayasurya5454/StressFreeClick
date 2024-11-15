@@ -1,6 +1,7 @@
 const mongoose= require('mongoose');
 
 const simontheonlyoneSchema = new mongoose.Schema({
+    id: mongoose.Schema.Types.ObjectId,
     count :
     {
         type: Number,
@@ -8,4 +9,5 @@ const simontheonlyoneSchema = new mongoose.Schema({
         default: 0
     }
 });
-export const Simontheonlyone = mongoose.model('Simontheonlyone', simontheonlyoneSchema);
+ const Simontheonlyone = mongoose.model('Simontheonlyone', simontheonlyoneSchema);
+ module.exports = Simontheonlyone;

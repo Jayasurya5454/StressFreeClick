@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const trayRandallSchema = new mongoose.Schema({
+    id: mongoose.Schema.Types.ObjectId,
     count :
     {
         type: Number,
@@ -9,4 +10,5 @@ const trayRandallSchema = new mongoose.Schema({
     }
 });
 
-export const TrayRandall = mongoose.model('TrayRandall', trayRandallSchema);
+ const TrayRandall = mongoose.model('TrayRandall', trayRandallSchema);
+ module.exports = TrayRandall;

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const htwarriorsSchema = new mongoose.Schema({
+    id: mongoose.Schema.Types.ObjectId,
     count :
     {
         type: Number,
@@ -9,4 +10,5 @@ const htwarriorsSchema = new mongoose.Schema({
     }
 });
 
-export const Htwarriors = mongoose.model('Htwarriors', htwarriorsSchema);
+ const Htwarriors = mongoose.model('Htwarriors', htwarriorsSchema);
+ module.exports = Htwarriors;
