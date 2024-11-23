@@ -13,7 +13,12 @@ const StyledWrapper = styled.div`
   box-shadow: 0 0 20px rgba(0, 0, 0, .4);
   cursor: pointer;
 }
-
+.like-count {
+  
+    margin-top:50px; /* Pushes the like count to the bottom */
+    font-size: 16px;
+    color: #333;
+  }
 .heart {
   width: 2.4em;
   height: 4.3em;

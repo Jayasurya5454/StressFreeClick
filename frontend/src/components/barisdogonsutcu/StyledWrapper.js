@@ -4,6 +4,8 @@ const StyledWrapper = styled.div`
 
 .love-heart:before,#switch {
  display: none;
+ justify-content: space-between;
+ align-items: center;
 }
 
 .love-heart, .love-heart::after {
@@ -13,6 +15,8 @@ const StyledWrapper = styled.div`
  border-top-right-radius: 100px;
  width: 10px;
  height: 8px;
+ justify-content: space-between;
+ align-items: center;
  border-bottom: 0
 }
 
@@ -92,7 +96,13 @@ input:checked + .love-heart, input:checked + .love-heart::after, input:checked +
  transform: rotate(90deg);
  top: 7px;
 }
-
+ 
+.like-count {
+  
+    margin-top:80px; /* Pushes the like count to the bottom */
+    font-size: 16px;
+    color: #333;
+  }
 .love-heart .bottom {
  width: 11px;
  height: 11px;
