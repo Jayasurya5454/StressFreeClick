@@ -1,6 +1,6 @@
 import axios from 'axios';
 const base=axios.create({
-    baseURL:'http://localhost:5000/api',
+    baseURL:'https://likeme-backend-fxrs.onrender.com/api',
     headers:{
         'Content-Type':'application/json',
     },
