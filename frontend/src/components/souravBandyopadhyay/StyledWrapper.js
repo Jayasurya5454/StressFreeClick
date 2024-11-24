@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 const StyledWrapper = styled.div`
   .cssload-main {
-    position: absolute;
+  
+    position:relative;
     content: '';
     left: 50%;
     transform: translate(-100%, -240%);
@@ -13,9 +14,11 @@ const StyledWrapper = styled.div`
 
   .cssload-main * {
     font-size: 62px;
+    flexDirection: 'column'
   }
 
   .cssload-heart {
+  
     animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
     -o-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
     -ms-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
@@ -28,13 +31,15 @@ const StyledWrapper = styled.div`
   }
 
   .cssload-heartL {
+   
     width: 1em;
     height: 1em;
     border: 1px solid rgb(252, 0, 101);
     background-color: rgb(252, 0, 101);
     content: '';
     position: absolute;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     border-radius: 100%;
     animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
     -o-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
@@ -55,7 +60,8 @@ const StyledWrapper = styled.div`
     background-color: rgb(252, 0, 101);
     content: '';
     position: absolute;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     border-radius: 100%;
     transform: translate(28px, -27px);
     -o-transform: translate(28px, -27px);
@@ -75,7 +81,8 @@ const StyledWrapper = styled.div`
     border: 1px solid rgb(252, 0, 101);
     background-color: rgb(252, 0, 101);
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     content: '';
     transform: scale(1) rotate(-45deg);
     -o-transform: scale(1) rotate(-45deg);
@@ -300,7 +307,12 @@ const StyledWrapper = styled.div`
       border-color: rgb(228,228,228);
     }
   }
-
+.like-count {
+  
+    margin-top:80px; /* Pushes the like count to the bottom */
+    font-size: 16px;
+    color: #333;
+  }
   @-moz-keyframes cssload-shadow {
     50% {
       -moz-transform: scale(0.5);
