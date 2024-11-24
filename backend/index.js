@@ -15,4 +15,3 @@ app.use('/api/trayrandall', require('./routes/trayRandall.js'));
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
     });
-        
