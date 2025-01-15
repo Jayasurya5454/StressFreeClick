@@ -4,6 +4,7 @@ import axios from '../../utils/axiosConfig';
 
 const Checkbox = () => {
   const [likeCount, setLikeCount] = useState(0);
+  const [isRotate,setIsRotate]=useState(false);
   useEffect(() => {
   
     const fetchLikeCount = async () => {
@@ -19,23 +20,28 @@ const Checkbox = () => {
 
   const handleLikeToggle = async () => {
     try {
+      setIsRotate(true);
       await axios.put('/souravbandyopadhyay/updatecount');
       setLikeCount((prev) => prev + 1);  
+      setTimeout(()=>{
+        setIsRotate(false);
+      },1778)
     } catch (error) {
       console.error('Error updating like count', error);
+      setIsRotate(false);
     }
   };
 
   return (
-    <StyledWrapper>
+    <StyledWrapper isRotate={isRotate}>
 		      
       <div className="cssload-main" onClick={handleLikeToggle}>
-        <div className="cssload-heart">
-          <span className="cssload-heartL"></span>
-          <span className="cssload-heartR"></span>
-          <span className="cssload-square"></span>
+        <div className={`cssload-heart ${isRotate ? 'rotating': ''}`}>
+          <span className={`cssload-heartL ${isRotate ? 'rotating': ''}`} ></span>
+          <span className={`cssload-heartR ${isRotate ? 'rotating': ''}`}></span>
+          <span className={`cssload-square ${isRotate ? 'rotating': ''}`}></span>
         </div>
-        <div className="cssload-shadow"></div>
+        <div className={`cssload-shadow ${isRotate ? 'rotating': ''}`}></div>
       </div>
       <p className='like-count'>Likes: {likeCount}</p> 
     </StyledWrapper>

@@ -10,6 +10,7 @@ const StyledWrapper = styled.div`
     border-radius: 5px;
     scale: 1.5;
     width: 100px;
+    
   }
   
   .comment-react button {
@@ -22,6 +23,7 @@ const StyledWrapper = styled.div`
     background-color: transparent;
     border: 0;
     outline: none;
+    cursor:pointer;
   }
   
   .comment-react button:after {
@@ -43,16 +45,16 @@ const StyledWrapper = styled.div`
     z-index: 9;
   }
   
-  .comment-react button:hover:after {
+  .comment-react button.clicked:after {
     animation: ripple 0.6s ease-in-out infinite;
   }
   
-  .comment-react button:hover svg {
+  .comment-react button.clicked svg {
     animation: ripple2 1s ease-in-out infinite;
     fill: #f5356e;
   }
   
-  .comment-react button:hover svg path {
+  .comment-react button.clicked svg path {
     stroke: #f5356e;
     fill: #f5356e;
   }

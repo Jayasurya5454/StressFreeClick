@@ -27,6 +27,9 @@ const Checkbox = () => {
         const response = await axios.put('/barisdogonsutcu/updatecount'); // Backend route to increment count
         setLikeCount(response.data.count); 
         setIsLiked(true); 
+        setTimeout(()=>{
+          setIsLiked(false)
+        },1000)
       } catch (error) {
         console.error('Error updating like count:', error);
       }

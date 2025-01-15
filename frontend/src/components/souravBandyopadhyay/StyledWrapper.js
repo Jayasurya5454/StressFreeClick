@@ -4,7 +4,7 @@ const StyledWrapper = styled.div`
   
     position:relative;
     content: '';
-    left: 50%;
+    left: 70%;
     transform: translate(-100%, -240%);
     -o-transform: translate(-100%, -240%);
     -ms-transform: translate(-100%, -240%);
@@ -14,10 +14,77 @@ const StyledWrapper = styled.div`
 
   .cssload-main * {
     font-size: 62px;
-    flexDirection: 'column'
+    flexDirection: 'column';
+    cursor:pointer;
   }
 
   .cssload-heart {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+   
+}
+
+.cssload-heartL {
+    width: 1em;
+    height: 1em;
+    border: 1px solid rgb(252, 0, 101);
+    background-color: rgb(252, 0, 101);
+    content: '';
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 100%;
+    transform: translate(-28px, -28px); /* Left part of the heart */
+}
+
+.cssload-heartR {
+    width: 1em;
+    height: 1em;
+    border: 1px solid rgb(252, 0, 101);
+    background-color: rgb(252, 0, 101);
+    content: '';
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 100%;
+    transform: translate(28px, -27px); /* Right part of the heart */
+}
+
+.cssload-square {
+    width: 1em;
+    height: 1em;
+    border: 1px solid rgb(252, 0, 101);
+    background-color: rgb(252, 0, 101);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    content: '';
+    transform: scale(1) rotate(-45deg); /* Square rotated to form the heart base */
+}
+
+.cssload-shadow {
+    top: 100px;
+    left: 50%;
+    content: '';
+    position: relative;
+    display: block;
+    bottom: -.5em;
+    width: 1em;
+    height: .24em;
+    background-color: rgb(215, 215, 215);
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 50%;
+}
+
+
+  .cssload-heart{
+   top: 50%;
+   position:absolute;
+   left: 50%;
+   }
+
+  .cssload-heart.rotating {
   
     animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
     -o-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
@@ -30,7 +97,7 @@ const StyledWrapper = styled.div`
     position: absolute;
   }
 
-  .cssload-heartL {
+  .cssload-heartL.rotating {
    
     width: 1em;
     height: 1em;
@@ -53,7 +120,7 @@ const StyledWrapper = styled.div`
     -moz-transform: translate(-28px, -27px);
   }
 
-  .cssload-heartR {
+  .cssload-heartR.rotating {
     width: 1em;
     height: 1em;
     border: 1px solid rgb(252, 0, 101);
@@ -75,7 +142,7 @@ const StyledWrapper = styled.div`
     -moz-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
   }
 
-  .cssload-square {
+  .cssload-square.rotating {
     width: 1em;
     height: 1em;
     border: 1px solid rgb(252, 0, 101);
@@ -96,8 +163,8 @@ const StyledWrapper = styled.div`
     -moz-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
   }
 
-  .cssload-shadow {
-    top: 97px;
+  .cssload-shadow.rotating {
+    top: 100px;
     left: 50%;
     content: '';
     position: relative;

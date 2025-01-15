@@ -4,7 +4,8 @@ import axios from '../../utils/axiosConfig';
 
 const Checkbox = () => {
   const [likeCount, setLikeCount] = useState(0); 
-  const [isChecked, setIsChecked] = useState(false); 
+  const [isChecked, setIsChecked] = useState(false);
+  const [isClicked,setIsClicked] = useState(false)
 
   useEffect(() => {
     
@@ -21,23 +22,56 @@ const Checkbox = () => {
     fetchLikeData();
   }, []);
 
+  // const handleCheckboxChange = async () => {
+  //   try {
+  //     const action = isChecked ? -1 : 1; 
+  //     const response = await axios.put('/trayrandall/updatecount', { action });
+      
+      
+  //     setLikeCount(response.data.count);
+  //     setIsChecked(!isChecked); 
+  //     setIsClicked(true);
+  //     setTimeout(()=>{
+  //       setIsClicked(false);
+  //     },1000)
+  //   } catch (error) {
+  //     console.error('Error updating like count', error);
+
+  //   }
+  // };
   const handleCheckboxChange = async () => {
+    // Optimistically update the UI state
+    const newLikeCount = isChecked ? likeCount - 1 : likeCount + 1;
+    setLikeCount(newLikeCount);
+    setIsChecked(!isChecked);
+    setIsClicked(true);
+  
+    // Reset the clicked animation after the duration
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 1000);
+  
+    // Make the API call
     try {
       const action = isChecked ? -1 : 1; 
       const response = await axios.put('/trayrandall/updatecount', { action });
-      
-      
+  
+      // Ensure the state matches the server response in case of discrepancies
       setLikeCount(response.data.count);
-      setIsChecked(!isChecked); 
     } catch (error) {
       console.error('Error updating like count', error);
+      
+      // Revert the UI changes if the API call fails
+      setLikeCount(isChecked ? likeCount + 1 : likeCount - 1);
+      setIsChecked(isChecked);
     }
   };
+  
 
   return (
     <StyledWrapper>
       <div className="comment-react">
-        <button onClick={handleCheckboxChange}>
+        <button className={isClicked?'clicked':''} onClick={handleCheckboxChange}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"

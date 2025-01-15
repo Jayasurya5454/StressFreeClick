@@ -11,7 +11,8 @@ export default function LoginPage() {
             </SignedOut>
             
             <SignedIn>
-            <UserButton />
+            <div style={{position:'absolute',top:'10px',right:'10px' }}> <UserButton /></div>
+           
                 <Likeme />
                 
             </SignedIn>

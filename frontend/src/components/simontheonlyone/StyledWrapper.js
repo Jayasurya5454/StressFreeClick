@@ -42,7 +42,7 @@ const StyledWrapper = styled.div`
   z-index: 1;
 }
 
-.container:hover > .heart_left {
+.container.clicked .heart_left {
   animation: like 450ms ease forwards;
 }
 
@@ -71,7 +71,7 @@ const StyledWrapper = styled.div`
   }
 }
 
-.container:hover > .heart_right {
+.container.clicked .heart_right {
   animation: loke 450ms ease;
 }
 
@@ -111,7 +111,7 @@ const StyledWrapper = styled.div`
   transition: scale 250ms linear, opacity 500ms linear 270ms;
 }
 
-.container:hover > .orange_effect {
+.container.clicked  .orange_effect {
   scale: 6;
   opacity: 0;
 }
@@ -121,7 +121,7 @@ const StyledWrapper = styled.div`
   transition: scale 280ms linear 200ms, opacity 500ms linear 270ms;
 }
 
-.container:hover > .white_effect {
+.container.clicked  .white_effect {
   scale: 6;
   opacity: 0;
 }
