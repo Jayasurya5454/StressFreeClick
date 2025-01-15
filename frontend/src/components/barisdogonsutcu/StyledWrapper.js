@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
 
-.love-heart:before,#switch {
+.love-heart:before, #switch {
  display: none;
  justify-content: space-between;
  align-items: center;
@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
  height: 8px;
  justify-content: space-between;
  align-items: center;
- border-bottom: 0
+ border-bottom: 0;
 }
 
 .round {
@@ -30,13 +30,30 @@ const StyledWrapper = styled.div`
  border-radius: 100%;
  left: 0px;
  bottom: -1px;
- transition: all .5s ease;
- animation: check-animation2 .5s forwards;
+ transition: all 0.5s ease;
+ animation: check-animation2 0.5s forwards;
+}
+
+.card {
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 40px 20px; /* More padding to accommodate the heart */
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 250px; /* Slightly larger to fit the heart */
+  margin: 100px auto; /* Add vertical spacing */
+  border: 1px solid hsl(231deg 28% 86%); /* Match border color with the heart */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
 input:checked + label .round {
  transform: translate(0px, 0px);
- animation: check-animation .5s forwards;
+ animation: check-animation 0.5s forwards;
  background-color: hsl(0deg 0% 100%);
 }
 
@@ -76,6 +93,10 @@ input:checked + label .round {
  border-color: hsl(231deg 28% 86%);
  cursor: pointer;
  top: 0;
+ margin-top : 20px;
+margin-left : 30px;
+margin-bottom : 0px;
+
 }
 
 input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
@@ -98,11 +119,12 @@ input:checked + .love-heart, input:checked + .love-heart::after, input:checked +
 }
  
 .like-count {
-  
-    margin-top:80px; /* Pushes the like count to the bottom */
-    font-size: 16px;
-    color: #333;
-  }
+    margin-top: 20px; /* Align closer to the heart */
+    font-size: 18px; /* Slightly larger font for visibility */
+    font-weight: bold;
+    color: hsl(231deg 28% 50%); /* Muted color matching the theme */
+}
+
 .love-heart .bottom {
  width: 11px;
  height: 11px;
@@ -114,7 +136,5 @@ input:checked + .love-heart, input:checked + .love-heart::after, input:checked +
  border-radius: 0px 0px 0px 5px;
 }
 `;
-
-
 
 export default StyledWrapper;

@@ -6,7 +6,6 @@ const Checkbox = () => {
   const [likeCount, setLikeCount] = useState(0); 
   const [isLiked, setIsLiked] = useState(false); 
 
- 
   useEffect(() => {
     const fetchLikeCount = async () => {
       try {
@@ -20,16 +19,15 @@ const Checkbox = () => {
     fetchLikeCount();
   }, []);
 
- 
   const handleLike = async () => {
     if (!isLiked) { 
       try {
-        const response = await axios.put('/barisdogonsutcu/updatecount'); // Backend route to increment count
+        const response = await axios.put('/barisdogonsutcu/updatecount'); 
         setLikeCount(response.data.count); 
         setIsLiked(true); 
-        setTimeout(()=>{
-          setIsLiked(false)
-        },1000)
+        setTimeout(() => {
+          setIsLiked(false);
+        }, 1000);
       } catch (error) {
         console.error('Error updating like count:', error);
       }
@@ -38,21 +36,23 @@ const Checkbox = () => {
 
   return (
     <StyledWrapper>
-      <div className="love">
-        <input
-          id="switch"
-          type="checkbox"
-          checked={isLiked} 
-          onChange={handleLike}
-        />
-        <label className="love-heart" htmlFor="switch">
-          <i className="left"></i>
-          <i className="right"></i>
-          <i className="bottom"></i>
-          <div className="round"></div>
-        </label>
+      <div className="card">
+        <div className="love">
+          <input
+            id="switch"
+            type="checkbox"
+            checked={isLiked} 
+            onChange={handleLike}
+          />
+          <label className="love-heart" htmlFor="switch">
+            <i className="left"></i>
+            <i className="right"></i>
+            <i className="bottom"></i>
+            <div className="round"></div>
+          </label>
+        </div>
+        <p className="like-count">Likes: {likeCount}</p> 
       </div>
-      <p className='like-count'>Likes: {likeCount}</p> 
     </StyledWrapper>
   );
 };

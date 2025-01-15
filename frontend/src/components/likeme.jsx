@@ -4,7 +4,7 @@ import Checkbox1 from '../components/htwarriors/Checkbox';
 import Checkbox2 from '../components/simontheonlyone/Checkbox';
 import Checkbox3 from '../components/souravBandyopadhyay/Checkbox';
 import Checkbox4 from '../components/trayRandall/Checkbox';
-
+import backgroundImage from '../components/image.png'; // Adjust the path if necessary
 const Likeme = () => {
   return (
     <div
@@ -17,6 +17,8 @@ const Likeme = () => {
         gap: '20px', 
         width: '80%', 
         boxSizing: 'border-box', 
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
       }}
     >
       <div style={{ textAlign: 'center' }}>
