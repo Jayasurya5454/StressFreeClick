@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
     display: flex;
     justify-content: center;
     padding: 5px;
-    background-color:rgb(140, 226, 219);
+    background-color:rgb(113, 192, 155);
     border-radius: 5px;
     scale: 1.5;
     width: 100px;
