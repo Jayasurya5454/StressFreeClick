@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
     display: flex;
     justify-content: center;
     padding: 5px;
-    background-color: #f1f1f1;
+    background-color:rgb(140, 226, 219);
     border-radius: 5px;
     scale: 1.5;
     width: 100px;
@@ -81,7 +81,7 @@ const StyledWrapper = styled.div`
   .comment-react hr {
     width: 80%;
     height: 1px;
-    background-color: #dfe1e6;
+    background-color:rgb(43, 83, 184);
     margin: auto;
     border: 0;
   }
@@ -94,7 +94,7 @@ const StyledWrapper = styled.div`
     margin: auto;
     font-size: 20px;
     font-weight: 600;
-    color: #707277;
+    color:rgb(11, 53, 160);
     padding-right: 10px;
     text-align: center;
   }

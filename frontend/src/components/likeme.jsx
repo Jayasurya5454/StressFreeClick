@@ -4,7 +4,6 @@ import Checkbox1 from '../components/htwarriors/Checkbox';
 import Checkbox2 from '../components/simontheonlyone/Checkbox';
 import Checkbox3 from '../components/souravBandyopadhyay/Checkbox';
 import Checkbox4 from '../components/trayRandall/Checkbox';
-//import backgroundImage from '../components/image.png'; // Adjust the path if necessary
 const Likeme = () => {
   return (
     <div
@@ -34,6 +33,7 @@ const Likeme = () => {
       <div style={{ textAlign: 'center' }}>
         <Checkbox4 />
       </div>
+      
     </div>
   );
 };
