@@ -49,12 +49,14 @@ const Checkbox = ({ onLikeToggle }) => {
 
   return (
     <StyledWrapper>
+      <div className='card'>
       <div
         className={`heart ${isLiked ? 'liked' : ''} ${isBeating ? 'beating' : ''}`}
         onClick={handleLikeToggle}
         title="Like"
       ></div>
       <p className="like-count">Likes: {likeCount}</p>
+      </div>
     </StyledWrapper>
   );
 };

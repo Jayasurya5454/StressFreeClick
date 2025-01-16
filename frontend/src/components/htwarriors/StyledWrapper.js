@@ -5,7 +5,22 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   
+.card {
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 45px 40px; 
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 250px;
+    margin: 100px auto; 
+    border: 1px solid hsl(231deg 28% 86%);
+  }
 
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
   .heart {
     
     height: 50px;
@@ -67,9 +82,10 @@ const StyledWrapper = styled.div`
   }
 
   .like-count {
-    margin-top: 40px;
-    font-size: 14px;
-    color: #333;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight:bold;
+    color:hsl(231deg 28% 50%) ;
   }
 `;
 

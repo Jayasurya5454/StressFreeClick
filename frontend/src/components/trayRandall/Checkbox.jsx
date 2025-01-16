@@ -70,6 +70,7 @@ const Checkbox = () => {
 
   return (
     <StyledWrapper>
+      <div className='card-container'>
       <div className="comment-react">
         <button className={isClicked?'clicked':''} onClick={handleCheckboxChange}>
           <svg
@@ -89,6 +90,7 @@ const Checkbox = () => {
           </svg>
         </button>
         <span>{likeCount}</span>
+      </div>
       </div>
     </StyledWrapper>
   );

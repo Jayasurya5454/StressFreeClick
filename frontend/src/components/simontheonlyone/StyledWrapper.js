@@ -1,27 +1,48 @@
 import styled from 'styled-components';
 const StyledWrapper = styled.div`
+
+.card-container {
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  width: 140px;
+  height: 175px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 6em;
-  height: 6em;
+  width: 8em;
+  height: 8em;
   border: none;
   border-radius: 1em;
-  background: #ddd;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+  background: #f9f9f9;
+  //box-shadow: 0 0 20px rgba(0, 0, 0, .4);
   cursor: pointer;
 }
 .like-count {
-  
-    margin-top:50px; /* Pushes the like count to the bottom */
-    font-size: 16px;
-    color: #333;
-  }
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight:bold;
+    color:hsl(231deg 28% 50%) ;
+}
 .heart {
-  width: 2.4em;
-  height: 4.3em;
+  width: 3.4em;
+  height: 6.3em;
   border: none;
   border-radius: 10em;
   pointer-events: none;

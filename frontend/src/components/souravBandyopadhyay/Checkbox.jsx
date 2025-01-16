@@ -34,7 +34,8 @@ const Checkbox = () => {
 
   return (
     <StyledWrapper isRotate={isRotate}>
-		      
+		      <div className='card-container'>
+          <div className='card'>
       <div className="cssload-main" onClick={handleLikeToggle}>
         <div className={`cssload-heart ${isRotate ? 'rotating': ''}`}>
           <span className={`cssload-heartL ${isRotate ? 'rotating': ''}`} ></span>
@@ -44,6 +45,8 @@ const Checkbox = () => {
         <div className={`cssload-shadow ${isRotate ? 'rotating': ''}`}></div>
       </div>
       <p className='like-count'>Likes: {likeCount}</p> 
+      </div>
+      </div>
     </StyledWrapper>
   );
 };

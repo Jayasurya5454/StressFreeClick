@@ -38,10 +38,10 @@ const StyledWrapper = styled.div`
   background-color: #f9f9f9;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  padding: 40px 20px; /* More padding to accommodate the heart */
+  padding: 45px 50px; /* More padding to accommodate the heart */
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  max-width: 250px; /* Slightly larger to fit the heart */
+  max-width: 300px; /* Slightly larger to fit the heart */
   margin: 100px auto; /* Add vertical spacing */
   border: 1px solid hsl(231deg 28% 86%); /* Match border color with the heart */
 }
@@ -88,7 +88,7 @@ input:checked + label .round {
 .love-heart {
  box-sizing: border-box;
  position: relative;
- transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+ transform: rotate(-45deg) translate(-50%, -33px) scale(5);
  display: block;
  border-color: hsl(231deg 28% 86%);
  cursor: pointer;
@@ -119,7 +119,7 @@ input:checked + .love-heart, input:checked + .love-heart::after, input:checked +
 }
  
 .like-count {
-    margin-top: 20px; /* Align closer to the heart */
+    margin-top: 50px; /* Align closer to the heart */
     font-size: 18px; /* Slightly larger font for visibility */
     font-weight: bold;
     color: hsl(231deg 28% 50%); /* Muted color matching the theme */

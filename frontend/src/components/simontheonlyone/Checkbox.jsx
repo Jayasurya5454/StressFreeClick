@@ -39,6 +39,7 @@ const Checkbox = () => {
 
   return (
     <StyledWrapper>
+      <div className='card-container'>
       <button className={`container ${isClicked ? 'clicked':''}`} onClick={handleLikeToggle}>
         <span className="effect orange_effect"></span>
         <span className="effect white_effect"></span>
@@ -47,6 +48,7 @@ const Checkbox = () => {
        {showMsg && <div className="like">I love it</div>} 
       </button>
       <p className='like-count'>Likes: {likeCount}</p> 
+      </div>
     </StyledWrapper>
   );
 };

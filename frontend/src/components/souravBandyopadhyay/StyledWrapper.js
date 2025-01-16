@@ -1,10 +1,31 @@
 import styled from 'styled-components';
 const StyledWrapper = styled.div`
+  
+   
+    .card {
+    width: 150px;
+    height: 185px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
   .cssload-main {
   
     position:relative;
     content: '';
-    left: 70%;
+    left: 28%;
     transform: translate(-100%, -240%);
     -o-transform: translate(-100%, -240%);
     -ms-transform: translate(-100%, -240%);
@@ -13,18 +34,17 @@ const StyledWrapper = styled.div`
   }
 
   .cssload-main * {
-    font-size: 62px;
-    flexDirection: 'column';
+    font-size: 68px;
     cursor:pointer;
   }
 
   .cssload-heart {
-    top: 50%;
-    left: 50%;
+    top:120px;
+    left: 40%;
     position: absolute;
    
 }
-
+  
 .cssload-heartL {
     width: 1em;
     height: 1em;
@@ -64,8 +84,8 @@ const StyledWrapper = styled.div`
 }
 
 .cssload-shadow {
-    top: 100px;
-    left: 50%;
+    top:210px;
+    left: 40%;
     content: '';
     position: relative;
     display: block;
@@ -78,11 +98,7 @@ const StyledWrapper = styled.div`
 }
 
 
-  .cssload-heart{
-   top: 50%;
-   position:absolute;
-   left: 50%;
-   }
+  
 
   .cssload-heart.rotating {
   
@@ -91,9 +107,9 @@ const StyledWrapper = styled.div`
     -ms-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
     -webkit-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
     -moz-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-    top: 50%;
+    top: 120px;
     content: '';
-    left: 50%;
+    left: 40%;
     position: absolute;
   }
 
@@ -164,8 +180,8 @@ const StyledWrapper = styled.div`
   }
 
   .cssload-shadow.rotating {
-    top: 100px;
-    left: 50%;
+    top: 210px;
+    left: 40%;
     content: '';
     position: relative;
     display: block;
@@ -376,9 +392,10 @@ const StyledWrapper = styled.div`
   }
 .like-count {
   
-    margin-top:80px; /* Pushes the like count to the bottom */
-    font-size: 16px;
-    color: #333;
+   margin-top: 180px;
+    font-size: 18px;
+    font-weight:bold;
+    color:hsl(231deg 28% 50%) ;
   }
   @-moz-keyframes cssload-shadow {
     50% {

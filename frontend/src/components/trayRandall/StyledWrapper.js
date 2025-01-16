@@ -1,6 +1,25 @@
 import styled from "styled-components";
 const StyledWrapper = styled.div`
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 175px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  .card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
 .comment-react {
     margin: 0;
     display: flex;
