@@ -1,12 +1,12 @@
-const portfolio  = require('../models/portfolio');
+const portfolio = require('../models/portfolio');
 
 const updateLikeValue = async (req, res) => {
     try {
-        // No action is needed here anymore, so we just update the like count to 1
+        // Increment the like count by 1 each time the function is called
         const document = await portfolio.findOneAndUpdate(
             {},
-            { $set: { count: 1 } }, // Directly set the count to 1
-            { new: true, upsert: true }
+            { $inc: { count: 1 } }, // Increment count by 1
+            { new: true, upsert: true } // Ensure it creates the document if not already present
         );
         res.json({ count: document.count });
     } catch (error) {
@@ -22,7 +22,7 @@ const getLikeValue = async (req, res) => {
     } catch (error) {
         console.error('Error getting like value:', error);
         res.status(500).json({ message: 'Server error' });
-    }  
+    }
 };
 
 module.exports = { updateLikeValue, getLikeValue };
