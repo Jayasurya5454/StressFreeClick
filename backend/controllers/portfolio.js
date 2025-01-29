@@ -2,15 +2,11 @@ const portfolio  = require('../models/portfolio');
 
 const updateLikeValue = async (req, res) => {
     try {
-        const { action } = req.body;
-        if (!['increment', 'decrement'].includes(action)) {
-            return res.status(400).json({ message: 'Invalid action specified. Use "increment" or "decrement".' });
-        }
-        const incrementValue = action === 'increment' ? 1 : -1;
+        // No action is needed here anymore, so we just update the like count to 1
         const document = await portfolio.findOneAndUpdate(
             {},
-            { $inc: { count: incrementValue } }, 
-            { new: true, upsert: true } 
+            { $set: { count: 1 } }, // Directly set the count to 1
+            { new: true, upsert: true }
         );
         res.json({ count: document.count });
     } catch (error) {
@@ -18,7 +14,8 @@ const updateLikeValue = async (req, res) => {
         res.status(500).json({ message: 'Server error. Could not update like value.' });
     }
 };
-const getLikeValue = async (req,res) => {
+
+const getLikeValue = async (req, res) => {
     try {
         const document = await portfolio.findOne({});
         res.json({ count: document.count });
@@ -27,13 +24,6 @@ const getLikeValue = async (req,res) => {
         res.status(500).json({ message: 'Server error' });
     }  
 };
-module.exports = { updateLikeValue,getLikeValue}
 
-
-
-
-
-
-
-
+module.exports = { updateLikeValue, getLikeValue };
 
