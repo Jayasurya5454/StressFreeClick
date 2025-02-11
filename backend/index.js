@@ -8,6 +8,8 @@ app.use(cors());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 connectDB();
+const cron = require('node-cron');
+
 cron.schedule('*/7 * * * *', () => {
     console.log('Healthy');
 });
