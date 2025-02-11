@@ -8,7 +8,9 @@ app.use(cors());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 connectDB();
-
+cron.schedule('*/7 * * * *', () => {
+    console.log('Healthy');
+});
 app.use('/api/barisdogonsutcu', require('./routes/barisdogonsutcu.js'));
 app.use('/api/htwarriors', require('./routes/htwarriors.js'));
 app.use('/api/simontheonlyone', require('./routes/simontheonlyone.js'));
