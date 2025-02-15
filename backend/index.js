@@ -19,6 +19,7 @@ app.use('/api/simontheonlyone', require('./routes/simontheonlyone.js'));
 app.use('/api/souravbandyopadhyay', require('./routes/souravBandyopadhyay.js'));
 app.use('/api/trayrandall', require('./routes/trayRandall.js'));
 app.use('/api/portfolio',require('./routes/portfolio.js'))
+app.use('/api/snapurl',require('./routes/snapurl.js'))
 app.get('/api/status', (req, res) => {
     res.json({ status: 'ready' });
   });
